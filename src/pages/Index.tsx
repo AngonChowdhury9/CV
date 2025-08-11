@@ -414,7 +414,7 @@ export default function CV() {
                   </div>
                   <div>
                     <h3 className="font-medium text-lg">
-                      Higher Secondary School Certificated
+                      Higher Secondary School Certificate
                     </h3>
                     <p className="text-muted-foreground">
                       Hazera Tazu Degree College, Chattogram, Bangladesh.
