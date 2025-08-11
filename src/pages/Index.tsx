@@ -35,10 +35,10 @@ export default function CV() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4 pt-8 pb-16" id="cv-content">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-          <div className="md:col-span-4 md:sticky md:top-8 self-start h-fit">
+          <div className="md:col-span-4 md:sticky md:top-6 self-start h-fit">
             <Card className="border-none shadow-lg">
               <CardHeader className="text-center">
-                <div className="mx-auto aspect-square w-32 rounded-full overflow-hidden mb-4 border border-gray-300 shadow">
+                <div className="mx-auto aspect-square w-32 rounded-full overflow-hidden mb-4 shadow">
                   <img
                     src={`${baseUrl}Angon.jpg`}
                     alt="Profile"
@@ -50,7 +50,7 @@ export default function CV() {
                 </CardTitle>
                 <p className="text-muted-foreground mt-1">Software Engineer</p>
 
-                <div className="flex justify-center mt-4 space-x-2">
+                <div className="flex justify-center space-x-2 mb-0">
                   <Button
                     size="icon"
                     variant="ghost"
@@ -66,10 +66,8 @@ export default function CV() {
                   </Button>
                 </div>
               </CardHeader>
-
               <CardContent>
                 <Separator className="my-4" />
-
                 <div className="space-y-4 text-sm">
                   <div className="flex items-start">
                     <Mail className="h-4 w-4 mr-3 mt-1 text-muted-foreground" />
@@ -84,15 +82,16 @@ export default function CV() {
                     <span>Chittagong, Bangladesh</span>
                   </div>
                 </div>
-
-                <div className="space-y-2 mt-6">
-                  <Button
-                    variant="outline"
-                    className="w-full"
-                    onClick={downloadPDF}
-                  >
-                    <Download className="mr-2 h-4 w-4" /> Download PDF
-                  </Button>
+                <div className="mt-6">
+                  <div className="space-y-2 mt-6">
+                    <Button
+                      variant="outline"
+                      className="w-full"
+                      onClick={downloadPDF}
+                    >
+                      <Download className="mr-2 h-4 w-4" /> Download PDF
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -108,14 +107,10 @@ export default function CV() {
                   <p className="text-muted-foreground text-justify">
                     I’m a passionate Software Engineer with expertise in full
                     stack development, specializing in .NET Framework, Angular,
-                    and OutSystems low-code platform. I have hands-on experience
-                    building scalable enterprise applications and integrating
-                    cloud services like Azure and AWS. Skilled at collaborating
-                    with clients to gather requirements and delivering
-                    high-quality solutions that meet business needs.
-                    Continuously learning and evolving my skills in software
-                    development, DevOps, and cloud computing to stay ahead in
-                    the fast-changing tech landscape
+                    and OutSystems low-code platform. Continuously learning and
+                    evolving my skills in software development, DevOps, and
+                    cloud computing to stay ahead in the fast-changing tech
+                    landscape
                   </p>
                 </CardContent>
               </Card>
@@ -124,55 +119,116 @@ export default function CV() {
             <section id="experience">
               <Card className="border-none shadow-lg">
                 <CardHeader>
-                  <CardTitle>Work Experience</CardTitle>
+                  <CardTitle>Experience</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-6">
-                  {/* Experience Item */}
-                  <div className="p-5 rounded-lg border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow">
-                    <div className="flex justify-between flex-wrap gap-2">
-                      <div>
-                        <h3 className="font-semibold text-lg">
-                          Software Engineer
-                        </h3>
-                        <p className="text-muted-foreground">
-                          Surbana Technologies Pte. Ltd.
-                        </p>
+                <CardContent>
+                  <div className="space-y-8">
+                    {/* SJ Group Experience */}
+                    <div className="flex gap-4 items-start">
+                      <div className="flex-shrink-0 w-14 h-14 rounded-lg bg-white flex items-center justify-center">
+                        <img
+                          src={`${baseUrl}sj_logo.jpeg`}
+                          className="w-10 h-10 object-contain"
+                        />
                       </div>
-                      <Badge variant="outline" className="h-fit">
-                        May 2023 – Present
-                      </Badge>
+                      <div className="flex-1">
+                        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                          <div>
+                            <h3 className="font-semibold text-base">
+                              SJ Group
+                            </h3>
+                            <span className="text-sm text-gray-500">
+                              Full-time · 2 yrs 2 mos
+                            </span>
+                          </div>
+                          <span className="text-sm text-gray-500 mt-1 md:mt-0">
+                            Apr 2025 – Jun 2025
+                          </span>
+                        </div>
+                        {/* Timeline */}
+                        <div className="ml-2 border-l-2 border-gray-200 pl-4 mt-2">
+                          <div className="mb-4">
+                            <h4 className="font-semibold text-sm">
+                              Software Engineer
+                            </h4>
+                            <div className="text-xs text-gray-500 mb-1">
+                              Apr 2025 – Jun 2025
+                            </div>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-sm">
+                              Junior Software Engineer
+                            </h4>
+                            <div className="text-xs text-gray-500 mb-1">
+                              May 2023 – Apr 2025
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-
-                  {/* Experience Item */}
-                  <div className="p-5 rounded-lg border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow">
-                    <div className="flex justify-between flex-wrap gap-2">
-                      <div>
-                        <h3 className="font-semibold text-lg">
-                          Software Engineering Trainee
-                        </h3>
-                        <p className="text-muted-foreground">
-                          S3 Innovate Pte. Ltd.
-                        </p>
+                    {/* S3 Innovate Experience */}
+                    <div className="flex gap-4 items-start">
+                      <div className="flex-shrink-0 w-14 h-14 rounded-lg bg-white flex items-center justify-center">
+                        <img
+                          src={`${baseUrl}s3innovate_logo.jpeg`}
+                          className="w-10 h-10 object-contain"
+                        />
                       </div>
-                      <Badge variant="outline" className="h-fit">
-                        Aug 2022 – Apr 2023
-                      </Badge>
+                      <div className="flex-1">
+                        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                          <div>
+                            <h3 className="font-semibold text-base">
+                              S3 Innovate Pte. Ltd.
+                            </h3>
+                            <span className="text-sm text-gray-500">
+                              Full-time · 8 mos
+                            </span>
+                          </div>
+                          <span className="text-sm text-gray-500 mt-1 md:mt-0">
+                            Aug 2022 – April 2023
+                          </span>
+                        </div>
+                        {/* Timeline */}
+                        <div className="mt-1">
+                          <div className="mb-4">
+                            <h4 className="font-semibold text-sm">
+                              Trainee Software Engineer
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-
-                  {/* Experience Item */}
-                  <div className="p-5 rounded-lg border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow">
-                    <div className="flex justify-between flex-wrap gap-2">
-                      <div>
-                        <h3 className="font-semibold text-lg">
-                          Software Engineer Intern
-                        </h3>
-                        <p className="text-muted-foreground">Dev Skill</p>
+                    {/* Dev Skill Experience */}
+                    <div className="flex gap-4 items-start">
+                      <div className="flex-shrink-0 w-14 h-14 rounded-lg bg-white flex items-center justify-center">
+                        <img
+                          src={`${baseUrl}devSkill_logo.jpeg`}
+                          className="w-10 h-10 object-contain"
+                        />
                       </div>
-                      <Badge variant="outline" className="h-fit">
-                        May 2022 – July 2022
-                      </Badge>
+                      <div className="flex-1">
+                        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                          <div>
+                            <h3 className="font-semibold text-base">
+                              Dev Skill
+                            </h3>
+                            <span className="text-sm text-gray-500">
+                              Internship · 3 mos
+                            </span>
+                          </div>
+                          <span className="text-sm text-gray-500 mt-1 md:mt-0">
+                            May 2022 – Jul 2022
+                          </span>
+                        </div>
+                        {/* Timeline */}
+                        <div className="mt-1">
+                          <div className="mb-4">
+                            <h4 className="font-semibold text-sm">
+                              Intern (Software Engineering)
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
@@ -282,157 +338,358 @@ export default function CV() {
             <section id="skills">
               <Card className="border-none shadow-lg">
                 <CardHeader>
-                  <CardTitle>Skills</CardTitle>
+                  <CardTitle className="text-xl font-bold text-left">
+                    Skills
+                  </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-6">
-                  {/* Backend Development */}
-                  <div>
-                    <h4 className="font-semibold text-base mb-2">
-                      Backend Development
-                    </h4>
-                    <ul className="list-disc pl-5 text-muted-foreground text-sm space-y-1">
-                      <li>
-                        Full Stack Web Application development using .NET
-                        Framework, C#, Microsoft SQL Server, and PostgreSQL
-                      </li>
-                      <li>
-                        Developing Windows Services using the .NET Worker
-                        Service tool
-                      </li>
-                      <li>
-                        Advanced C# features: Reflection, LINQ, Delegates &
-                        Events, Threading, Collections, Expressions
-                      </li>
-                      <li>Writing Unit Tests using NUnit for .NET Framework</li>
-                      <li>
-                        Building Web APIs using the Web Service tool of .NET
-                        Framework following REST API conventions
-                      </li>
-                    </ul>
-                  </div>
+                <CardContent>
+                  <Tabs defaultValue="backend" className="w-full">
+                    {/* Tab Buttons */}
+                    <TabsList className="flex gap-2 p-2 bg-gray-50 rounded-lg">
+                      <TabsTrigger
+                        value="backend"
+                        className="flex-1 px-3 py-2 rounded-md text-sm font-medium transition-all duration-150 data-[state=active]:bg-black data-[state=active]:text-white data-[state=inactive]:bg-white data-[state=inactive]:text-gray-700 border border-gray-200"
+                      >
+                        Backend
+                      </TabsTrigger>
+                      <TabsTrigger
+                        value="frontend"
+                        className="flex-1 px-3 py-2 rounded-md text-sm font-medium transition-all duration-150 data-[state=active]:bg-black data-[state=active]:text-white data-[state=inactive]:bg-white data-[state=inactive]:text-gray-700 border border-gray-200"
+                      >
+                        Frontend
+                      </TabsTrigger>
+                      <TabsTrigger
+                        value="uiux"
+                        className="flex-1 px-3 py-2 rounded-md text-sm font-medium transition-all duration-150 data-[state=active]:bg-black data-[state=active]:text-white data-[state=inactive]:bg-white data-[state=inactive]:text-gray-700 border border-gray-200"
+                      >
+                        UI/UX
+                      </TabsTrigger>
+                      <TabsTrigger
+                        value="cloud"
+                        className="flex-1 px-3 py-2 rounded-md text-sm font-medium transition-all duration-150 data-[state=active]:bg-black data-[state=active]:text-white data-[state=inactive]:bg-white data-[state=inactive]:text-gray-700 border border-gray-200"
+                      >
+                        Cloud & Containerization
+                      </TabsTrigger>
+                      <TabsTrigger
+                        value="database"
+                        className="flex-1 px-3 py-2 rounded-md text-sm font-medium transition-all duration-150 data-[state=active]:bg-black data-[state=active]:text-white data-[state=inactive]:bg-white data-[state=inactive]:text-gray-700 border border-gray-200"
+                      >
+                        Database
+                      </TabsTrigger>
+                      <TabsTrigger
+                        value="lowcode"
+                        className="flex-1 px-3 py-2 rounded-md text-sm font-medium transition-all duration-150 data-[state=active]:bg-black data-[state=active]:text-white data-[state=inactive]:bg-white data-[state=inactive]:text-gray-700 border border-gray-200"
+                      >
+                        Low Code Development
+                      </TabsTrigger>
+                    </TabsList>
 
-                  {/* Cloud & Containerization */}
-                  <div>
-                    <h4 className="font-semibold text-base mb-2">
-                      Cloud & Containerization
-                    </h4>
-                    <ul className="list-disc pl-5 text-muted-foreground text-sm space-y-1">
-                      <li>
-                        Containerizing .NET Web applications using Docker
-                        Desktop and Command Prompt
-                      </li>
-                      <li>
-                        Developing Windows Services using the .NET Worker
-                        Service tool
-                      </li>
-                      <li>Familiar with AWS tools: SQS, S3 Bucket, DynamoDB</li>
-                      <li>
-                        Working with Azure services: Azure API Management
-                        (APIM), Azure Data Studio
-                      </li>
-                      <li>Hands-on experience with Azure Functions</li>
-                    </ul>
-                  </div>
+                    {/* Tab Contents */}
+                    <TabsContent
+                      value="backend"
+                      className="mt-4 animate-fadeIn"
+                    >
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          C#
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          .NET 6+
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          Entity Framework
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          LINQ
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          Dependency Injection
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          .Net Identity Server
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          Unit Testing(Nunit)
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          Threading
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg">
+                          SignalR
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          REST API
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          Minimal APIs
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          Logging (Serilog, NLog)
+                        </Badge>
+                      </div>
+                    </TabsContent>
 
-                  {/* Architecture & Design */}
-                  <div>
-                    <h4 className="font-semibold text-base mb-2">
-                      Architecture & Design
-                    </h4>
-                    <ul className="list-disc pl-5 text-muted-foreground text-sm space-y-1">
-                      <li>
-                        Maintaining Object-Oriented Design Principles: SOLID,
-                        DRY, YAGNI, PEN
-                      </li>
-                      <li>
-                        Familiarity with Design Patterns: Unit of Work,
-                        Repository, Singleton, Builder
-                      </li>
-                      <li>
-                        Familiar with Microservices and Clean Architecture
-                        patterns
-                      </li>
-                    </ul>
-                  </div>
+                    <TabsContent
+                      value="frontend"
+                      className="mt-4 animate-fadeIn"
+                    >
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          Angular
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          Typescript
+                        </Badge>
+                      </div>
+                    </TabsContent>
 
-                  {/* Frontend Development & UI/UX */}
-                  <div>
-                    <h4 className="font-semibold text-base mb-2">
-                      Frontend Development & UI/UX
-                    </h4>
-                    <ul className="list-disc pl-5 text-muted-foreground text-sm space-y-1">
-                      <li>Angular for frontend development</li>
-                      <li>Experience in UI/UX design using Figma</li>
-                    </ul>
-                  </div>
+                    <TabsContent value="uiux" className="mt-4 animate-fadeIn">
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          Figma
+                        </Badge>
+                      </div>
+                    </TabsContent>
 
-                  {/* Low-Code Development */}
-                  <div>
-                    <h4 className="font-semibold text-base mb-2">
-                      Low-Code Development
-                    </h4>
-                    <ul className="list-disc pl-5 text-muted-foreground text-sm space-y-1">
-                      <li>
-                        Designing and developing responsive web and mobile
-                        applications using OutSystems Service Studio.
-                      </li>
-                      <li>
-                        Creating data models and entity relationships directly
-                        within the platform.
-                      </li>
-                      <li>
-                        Implementing business logic with client/server actions
-                        and built-in functions.
-                      </li>
-                      <li>
-                        Applying lifecycle management with OutSystems Lifetime
-                        for staging and deployment.
-                      </li>
-                    </ul>
+                    <TabsContent value="cloud" className="mt-4 animate-fadeIn">
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          Docker
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          AWS SQS
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          AWS S3
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          AWS DynamoDB
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          Azure API Management
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          Azure Data Studio
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          Azure Functions
+                        </Badge>
+                      </div>
+                    </TabsContent>
+
+                    <TabsContent
+                      value="database"
+                      className="mt-4 animate-fadeIn"
+                    >
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          Microsoft SQL Server
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          PostgreSQL
+                        </Badge>
+                      </div>
+                    </TabsContent>
+
+                    <TabsContent
+                      value="lowcode"
+                      className="mt-4 animate-fadeIn"
+                    >
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          OutSystems O11
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          OutSystems Service Studio
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          OutSystems Lifecycle
+                        </Badge>
+                        <Badge className="w-full py-2 text-base flex justify-center items-center bg-gray-100 text-gray-800 rounded-lg hover:text-black">
+                          OutSystems Service Center
+                        </Badge>
+                      </div>
+                    </TabsContent>
+                  </Tabs>
+                </CardContent>
+              </Card>
+
+              {/* Animation style */}
+              <style>
+                {`
+                  @keyframes fadeIn {
+                    from {
+                      opacity: 0;
+                      transform: translateY(4px);
+                    }
+                    to {
+                      opacity: 1;
+                      transform: translateY(0);
+                    }
+                  }
+                  .animate-fadeIn {
+                    animation: fadeIn 0.3s ease-in-out;
+                  }
+                `}
+              </style>
+            </section>
+
+            {/* Certifications Section - moved to right side */}
+            <section id="certifications">
+              <Card className="border-none shadow-lg">
+                <CardHeader className="pb-2">
+                  <div className="flex items-center gap-2">
+                    <CardTitle className="text-xl font-bold">
+                      Certifications
+                    </CardTitle>
                   </div>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-4">
+                    <li className="p-4 rounded-lg bg-white/80 border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
+                      <div className="flex items-center gap-3 group">
+                        <a
+                          href="https://devskill.com/Certificate/273/1yj3rcga0i0?referralCode=ANGD011231"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 hover:bg-blue-200 transition"
+                          aria-label="View certificate"
+                        >
+                          <Globe className="w-5 h-5 text-blue-500" />
+                        </a>
+                        <div>
+                          <span className="font-semibold">
+                            Full Stack Asp.net Core MVC Web Development
+                          </span>
+                          <div className="text-xs text-gray-500 mt-1">
+                            By <b>Dev Skill</b>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li className="p-4 rounded-lg bg-white/80 border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
+                      <div className="flex items-center gap-3 group">
+                        <a
+                          href="https://devskill.com/Certificate/46/sarfrlmlls0?referralCode=ANGD011231"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 hover:bg-blue-200 transition"
+                          aria-label="View certificate"
+                        >
+                          <Globe className="w-5 h-5 text-blue-500" />
+                        </a>
+                        <div>
+                          <span className="font-semibold  ">
+                            Professional Programming with C#
+                          </span>
+                          <div className="text-xs text-gray-500 mt-1">
+                            By <b>Dev Skill</b>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </CardContent>
               </Card>
             </section>
-
             <section id="education">
               <Card className="border-none shadow-lg">
                 <CardHeader>
                   <CardTitle>Education</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <h3 className="font-medium text-lg">
-                      Bachelor of Science in Computer Science & Engineering
-                    </h3>
-                    <p className="text-muted-foreground">
-                      International Islamic University Chittagong, Chattogram,
-                      Bangladesh.
-                    </p>
-                    <p className="text-muted-foreground text-sm">
-                      CGPA: 3.21 / 4.00
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-lg">
-                      Higher Secondary School Certificate
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Hazera Tazu Degree College, Chattogram, Bangladesh.
-                    </p>
-                    <p className="text-muted-foreground text-sm">
-                      GPA: 4.17 / 5.00
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-lg">
-                      Secondary School Certificate
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Mern Sun School, Chattogram, Bangladesh.
-                    </p>
-                    <p className="text-muted-foreground text-sm">
-                      GPA: 5.00 / 5.00
-                    </p>
+                <CardContent>
+                  <div className="pl-0">
+                    {/* Degree 1 */}
+                    <div className="flex items-start mb-6">
+                      <div className="flex-shrink-0 mt-1 mr-3">
+                        <svg
+                          width="22"
+                          height="22"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M12 3L2 8l10 5 10-5-10-5zm0 7.5L4.21 8.21l7.79 3.89 7.79-3.89L12 10.5zm0 2.5v7.5m-6-2.5v-2.5m12 2.5v-2.5"
+                            stroke="#6366f1"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-base text-gray-900">
+                          Bachelor of Science in Computer Science & Engineering
+                        </h3>
+                        <p className="text-sm text-gray-500">
+                          International Islamic University Chittagong,
+                          Chattogram
+                        </p>
+                        <p className="text-xs text-gray-400">
+                          CGPA: 3.21 / 4.00
+                        </p>
+                      </div>
+                    </div>
+                    {/* Degree 2 */}
+                    <div className="flex items-start mb-6">
+                      <div className="flex-shrink-0 mt-1 mr-3">
+                        <svg
+                          width="22"
+                          height="22"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M12 3L2 8l10 5 10-5-10-5zm0 7.5L4.21 8.21l7.79 3.89 7.79-3.89L12 10.5zm0 2.5v7.5m-6-2.5v-2.5m12 2.5v-2.5"
+                            stroke="#6366f1"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-base text-gray-900">
+                          Higher Secondary School Certificate
+                        </h3>
+                        <p className="text-sm text-gray-500">
+                          Hazera Tazu Degree College, Chattogram
+                        </p>
+                        <p className="text-xs text-gray-400">
+                          GPA: 4.17 / 5.00
+                        </p>
+                      </div>
+                    </div>
+                    {/* Degree 3 */}
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 mt-1 mr-3">
+                        <svg
+                          width="22"
+                          height="22"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M12 3L2 8l10 5 10-5-10-5zm0 7.5L4.21 8.21l7.79 3.89 7.79-3.89L12 10.5zm0 2.5v7.5m-6-2.5v-2.5m12 2.5v-2.5"
+                            stroke="#6366f1"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-base text-gray-900">
+                          Secondary School Certificate
+                        </h3>
+                        <p className="text-sm text-gray-500">
+                          Mern Sun School, Chattogram
+                        </p>
+                        <p className="text-xs text-gray-400">
+                          GPA: 5.00 / 5.00
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
